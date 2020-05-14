@@ -96,3 +96,34 @@ docker-compose -f - up
 - programas para dar entradas aleatorias y buscar fllos en nuestras app
 - Dejar solo lo neesario para la producción
 - Controlar accesos, numero de logins que pueden hacer los usuarios
+
+### A6-Security Misconfiguration
+
+- Errores de configuraciones
+- subir el codigo en modo debug
+
+### A7:2017-Cross-Site Scripting (XSS)
+
+- injectar html o js a la app
+- robar sesiones
+- robar cookies de sesion
+- deface de webs
+
+**xss reflejado** ves la inyección si entras desde el link que se hizo la inyeccion si entras de otra forma no vez la inyección.
+
+```javascript
+some.com/page.html?default=<script>alert(document.cookie)</scr
+ipt>
+```
+
+**xss persistente (stored)** inyectamos en comentarios, ahi si entramos a la página veremos la inyección
+`some.com/page.html`
+
+✔ Limpiar los inputs correctamente (no admitir etiquetas script) limpiar los parámetros que se pasan en las url limpiarlas, output encoding("sistema de plantilla")
+
+### A8:2017-Insecure Deserialization
+
+traducir estructuras u objetos a un formato que
+puede ser guardado
+
+Actualmente no debe usarse
