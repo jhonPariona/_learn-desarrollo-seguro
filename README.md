@@ -14,15 +14,92 @@ _"reducir los riesgos a un nivel que resulte aceptable"_
 
 ![pasos del desarrollo seguro](img/ciclo-desarrollo-seguro.png)
 
+🦜 **CPE**
+
+Método estándar para describir e identificar software y hardware
+
+```
+cpe:2.3:a:apache:maven:3.0:*:*:*:*:*:*:*
+```
+
+![CPE structure](img/cpe-structure.png)
+
 🦜 **Vulnerabilidad**
+
+[📎 Buscador de vulnerabilidades CVEdetails](https://www.cvedetails.com/) |
 
 Debilidad que puede ser explotada por una o más amenazas.
 
 🦜 **Common Vulnerability Score System ([CVSS](https://www.welivesecurity.com/la-es/2014/08/04/vulnerabilidades-que-es-cvss-como-utilizarlo/)).**
 
+[📎 Calculadora de cvss](https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:L) |
+[📎 calculadora cvss](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator) |
+
 sistema de puntaje(0 al 10) que permite estimar el impacto de una vulnerabilidad en base a 3 métricas.
 
 ![métricas base, temporales y de entorno ](https://www.welivesecurity.com/wp-content/uploads/2014/08/metricas.jpg)
+**🔥 DB de vulnerabilidades**
+
+- [CVE](https://cve.mitre.org/cve/search_cve_list.html)
+- [NVD](https://nvd.nist.gov/vuln/search)
+- [Buscar por CPE NVD](https://nvd.nist.gov/products/cpe/search)
+
+## 🏆 Gestión de dependencias y vulnerabilidades
+
+Actualemnete pasan un aproximado de 3 dias hasta que un atacante aproveche una vulnerabilidad
+publicada. Las empresas y desarrolladores deben reducir el tiempo de actualizaciones.
+
+![vulnearbilidades](img/Ciclo-dependencias-vulnerables.png)
+
+🦜 Se infectan dependencias(es más habitual atacar una subdependencia pequeña
+para atacar a la dependecia principal) e ides de desarrollo por ello se debe
+de tener cuidado de donde se descarga
+
+🐧 **Prevenciones**
+
+- 🦜 Eliminar dependencias no usadas
+- 🦜 Monitorizar las versiones y vulnerabilidades usadas
+
+🐧 **Listar dependencias que tenemos**
+
+- npm ls
+- mvn
+- pip freeze
+
+## **Soluciones busqueda vulnerabilidades en dependencias**
+
+Buscan vulnerabilidades en el gráfico de dependencias
+
+- Github en la pestaña de insigthsalerts es de pago
+- [Snyk](https://snyk.io/plans/)
+  - Gratuito ilimitado para repos privados
+  - limitado 200 test repos privados al mes
+  - [cheat sheat](https://res.cloudinary.com/snyk/image/upload/v1551195097/Snyk_CLI_Cheat_Sheet.pdf)
+- [Fossa](https://fossa.com/pricing/)
+  - Podemos ver las licencias que usan nuestras dependencias
+- [Dependency-Check](https://owasp.org/www-project-dependency-check/)
+  - Podemos intergrarlo a maver o gradle para que se ejecute automáticamente
+  - usar la CLI que descarga la base de datis NVD
+  - solo soporta java y .net
+- [Pyup](https://pyup.io/)
+  - Gratis repos publicos de python
+  - muestra tbn las licencias
+  - abre una isuee para qeu actualices las dependencias
+- [lgtm](https://lgtm.com/)
+  - LGTM es completamente gratuito para proyectos de código abierto. Nos integramos con GitHub y Bitbucket, y podemos analizar proyectos escritos en Java, Python, JavaScript, TypeScript, C #, Go, C y C ++.
+
+## **Análisis de código**
+
+Buscan vulnerabilidades públicadas [lista de herramientas](https://owasp.org/www-community/Source_Code_Analysis_Tools) |
+[lista de analisis de código estático](https://github.com/analysis-tools-dev/static-analysis)
+
+- [LGTM](https://lgtm.com/)
+  - Gratis para proyectos open source
+  - integracion con github a pull requests
+- Kiuwan
+  - de pago
+- Sonar Qube
+  - gratis para open source
 
 ## Entorno de práctica [WebGoat](https://github.com/WebGoat/WebGoat)
 
