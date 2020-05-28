@@ -24,25 +24,11 @@ cpe:2.3:a:apache:maven:3.0:*:*:*:*:*:*:*
 
 ![CPE structure](img/cpe-structure.png)
 
-🦜 **Vulnerabilidad**
+## 🦜 **[Vulnerabilidad](https://github.com/jhonPariona/_learn-pentesting/blob/master/scanning.md#-vulnerabilidades)**
 
-[📎 Buscador de vulnerabilidades CVEdetails](https://www.cvedetails.com/) |
+[Vulnerabilidades](https://github.com/jhonPariona/_learn-pentesting/blob/master/scanning.md#-vulnerabilidades)
 
 Debilidad que puede ser explotada por una o más amenazas.
-
-🦜 **Common Vulnerability Score System ([CVSS](https://www.welivesecurity.com/la-es/2014/08/04/vulnerabilidades-que-es-cvss-como-utilizarlo/)).**
-
-[📎 Calculadora de cvss](https://www.first.org/cvss/calculator/3.0#CVSS:3.0/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:L) |
-[📎 calculadora cvss](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator) |
-
-sistema de puntaje(0 al 10) que permite estimar el impacto de una vulnerabilidad en base a 3 métricas.
-
-![métricas base, temporales y de entorno ](https://www.welivesecurity.com/wp-content/uploads/2014/08/metricas.jpg)
-**🔥 DB de vulnerabilidades**
-
-- [CVE](https://cve.mitre.org/cve/search_cve_list.html)
-- [NVD](https://nvd.nist.gov/vuln/search)
-- [Buscar por CPE NVD](https://nvd.nist.gov/products/cpe/search)
 
 ## 🏆 Gestión de dependencias y vulnerabilidades
 
